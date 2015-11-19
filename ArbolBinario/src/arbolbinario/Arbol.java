@@ -9,6 +9,8 @@ package arbolbinario;
  *
  * @author USUARIO
  */
+import java.util.Scanner;
+
 public class Arbol {
 
     private Nodo raiz;
@@ -36,6 +38,8 @@ public class Arbol {
  
     
     private void addNodo( Nodo nodo, Nodo raiz ) {
+        System.out.printl("Ingrese Nodo");
+        Scanner leer = new Scanner(System.in);
       
         if ( raiz == null ) {
            
@@ -46,6 +50,7 @@ public class Arbol {
             if ( nodo.getValor() <= raiz.getValor() ) {
                 
                 addNodo( nodo , raiz.getHojaIzquierda() );
+                
             }
             else {
                 
@@ -55,12 +60,15 @@ public class Arbol {
     }
  
     public void addNodo( Nodo nodo ) {
+        System.out.println("añadir nodo:");
+        Scanner leer = new Scanner(System.in);
         this.addNodo( nodo , this.raiz );
     }
  
     public boolean removeNodo( Nodo nodo ) {
  
-        
+        System.out.println(Ingrese Nodo a Eliminar:);
+        Scanner leer = new Scanner(System.in);
         boolean tieneNodoDerecha = nodo.getHojaDerecha() != null ? true : false;
         boolean tieneNodoIzquierda = nodo.getHojaIzquierda() != null ? true : false;
  
@@ -88,7 +96,8 @@ public class Arbol {
     }
  
     private boolean removeNodoCaso1( Nodo nodo ) {
-        
+        System.out.println("ingrese Nodo a Eliminar");
+        Scanner leer = new Scanner(System.in);
         Nodo hijoIzquierdo = nodo.getPadre().getHojaIzquierda();
         Nodo hijoDerecho =  nodo.getPadre().getHojaDerecha();
  
@@ -106,7 +115,8 @@ public class Arbol {
     }
     
    private boolean removeNodoCaso2( Nodo nodo ) {
-        
+        System.out.println("ingrese Nodo a Eliminar");
+        Scanner leer = new Scanner(System.in);
         Nodo hijoIzquierdo = nodo.getPadre().getHojaIzquierda();
         Nodo hijoDerecho = nodo.getPadre().getHojaDerecha();
  
@@ -139,7 +149,8 @@ public class Arbol {
         return false;
     }
     private boolean removeNodoCaso3( Nodo nodo ) {
-       
+       System.out.println("ingrese Nodo a Eliminar");
+       Scanner leer = new Scanner(System.in);
         Nodo nodoMasALaIzquierda = recorrerIzquierda( nodo.getHojaDerecha() );
         if ( nodoMasALaIzquierda != null ) {
             
@@ -158,8 +169,34 @@ public class Arbol {
         }
         return nodo;
     }
+    void preorden(Nodo nodo){
+        if(nodo!=null)
+        {
+            System.out.print(nodo.Padre);
+            preorden(nodo.hojaIzquierda());
+            preorden(nodo.hojaDerecha())
+        }
+    }
+    void inorden(Nodo nodo){
+        if(nodo!=null)
+        {
+            System.out.print(nodo.hojaIzquierda);
+            inorden (nodo.padre);
+            inorden (nodo.hojaDerecha);
+        }
+    }
+    void postorden(Nodo nodo){
+        if(nodo!=null)
+        {
+            System.out.print(nodo.hojaIzquierda);
+            postorden (nodo.hojaDerecha);
+            postorden (nodo.padre);
+        }
+    }
     
- public static void main(String[]args){
-    
+ 
+  public static void main(String[] args) {
+    System.out.println("Hola mundo");
+  }
 }
 }
