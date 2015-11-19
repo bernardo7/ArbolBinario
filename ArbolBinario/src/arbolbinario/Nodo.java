@@ -12,19 +12,19 @@ package arbolbinario;
 
     public class Nodo {
 
-    /* Declaraciones de variables */
+    
     private int valor;
 
     private Nodo padre;
     private Nodo hojaIzquierda;
     private Nodo hojaDerecha;
 
-    /* Constructor */
+    
     public Nodo(int valor) {
         this.valor = valor;
     }
 
-    /* Setters y Getters */
+  
     public void setValor(int valor) {
         this.valor = valor;
     }
