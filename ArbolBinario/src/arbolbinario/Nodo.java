@@ -9,58 +9,53 @@ package arbolbinario;
  *
  * @author USUARIO
  */
-public class Nodo {
+
+    public class Nodo {
+
+    /* Declaraciones de variables */
     private int valor;
-    
+
     private Nodo padre;
     private Nodo hojaIzquierda;
     private Nodo hojaDerecha;
-    
-    public Nodo(int valor){
+
+    /* Constructor */
+    public Nodo(int valor) {
         this.valor = valor;
     }
-    public void setValor(int Valor){
+
+    /* Setters y Getters */
+    public void setValor(int valor) {
         this.valor = valor;
     }
-    public void getValor(int Valor){
-        this.valor = valor;
+
+    public int getValor() {
+        return valor;
     }
-    public Nodo getPadre(){
+
+    public Nodo getPadre() {
         return padre;
     }
-    public Nodo setpadre(){
-        return padre;
+
+    public void setPadre(Nodo padre) {
+        this.padre = padre;
     }
-    public Nodo gethojaIzquierda(){
+
+    public Nodo getHojaIzquierda() {
         return hojaIzquierda;
     }
-    public Nodo sethojaIzquierda(){
-        return hojaIzquierda;
+
+    public void setHojaIzquierda(Nodo hojaIzquierda) {
+        this.hojaIzquierda = hojaIzquierda;
     }
-    public Nodo gethojaDerecha(){
+
+    public Nodo getHojaDerecha() {
         return hojaDerecha;
     }
-    public Nodo sethojaDerecha(){
-        return hojaDerecha;
+
+    public void setHojaDerecha(Nodo hojaDerecha) {
+        this.hojaDerecha = hojaDerecha;
     }
 
-    boolean getValor() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    Object getHojaIzquierda() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void setHojaIzquierda(Nodo nodo) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    Object getHojaDerecha() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void setHojaDerecha(Object object) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }
+
