@@ -7,7 +7,7 @@ package arbolbinario;
 
 /**
  *
- * @author USUARIO
+ * @author Gerson
  */
 
     public class Nodo {
@@ -15,9 +15,10 @@ package arbolbinario;
     
     private int valor;
 
-    private Nodo padre;
-    private Nodo hojaIzquierda;
-    private Nodo hojaDerecha;
+    Nodo padre;
+    Nodo hojaIzquierda;
+    Nodo hojaDerecha;
+    boolean Padre;
 
     
     public Nodo(int valor) {
@@ -55,6 +56,14 @@ package arbolbinario;
 
     public void setHojaDerecha(Nodo hojaDerecha) {
         this.hojaDerecha = hojaDerecha;
+    }
+
+    Nodo hojaIzquierda() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    Nodo hojaDerecha() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

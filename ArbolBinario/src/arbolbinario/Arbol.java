@@ -7,7 +7,7 @@ package arbolbinario;
 
 /**
  *
- * @author USUARIO
+ * @author Gerson
  */
 import java.util.Scanner;
 
@@ -38,8 +38,7 @@ public class Arbol {
  
     
     private void addNodo( Nodo nodo, Nodo raiz ) {
-        System.out.printl("Ingrese Nodo");
-        Scanner leer = new Scanner(System.in);
+        
       
         if ( raiz == null ) {
            
@@ -60,15 +59,12 @@ public class Arbol {
     }
  
     public void addNodo( Nodo nodo ) {
-        System.out.println("añadir nodo:");
-        Scanner leer = new Scanner(System.in);
+        
         this.addNodo( nodo , this.raiz );
     }
  
     public boolean removeNodo( Nodo nodo ) {
  
-        System.out.println(Ingrese Nodo a Eliminar:);
-        Scanner leer = new Scanner(System.in);
         boolean tieneNodoDerecha = nodo.getHojaDerecha() != null ? true : false;
         boolean tieneNodoIzquierda = nodo.getHojaIzquierda() != null ? true : false;
  
@@ -96,8 +92,7 @@ public class Arbol {
     }
  
     private boolean removeNodoCaso1( Nodo nodo ) {
-        System.out.println("ingrese Nodo a Eliminar");
-        Scanner leer = new Scanner(System.in);
+        
         Nodo hijoIzquierdo = nodo.getPadre().getHojaIzquierda();
         Nodo hijoDerecho =  nodo.getPadre().getHojaDerecha();
  
@@ -115,8 +110,7 @@ public class Arbol {
     }
     
    private boolean removeNodoCaso2( Nodo nodo ) {
-        System.out.println("ingrese Nodo a Eliminar");
-        Scanner leer = new Scanner(System.in);
+       
         Nodo hijoIzquierdo = nodo.getPadre().getHojaIzquierda();
         Nodo hijoDerecho = nodo.getPadre().getHojaDerecha();
  
@@ -149,8 +143,7 @@ public class Arbol {
         return false;
     }
     private boolean removeNodoCaso3( Nodo nodo ) {
-       System.out.println("ingrese Nodo a Eliminar");
-       Scanner leer = new Scanner(System.in);
+       
         Nodo nodoMasALaIzquierda = recorrerIzquierda( nodo.getHojaDerecha() );
         if ( nodoMasALaIzquierda != null ) {
             
@@ -174,7 +167,7 @@ public class Arbol {
         {
             System.out.print(nodo.Padre);
             preorden(nodo.hojaIzquierda());
-            preorden(nodo.hojaDerecha())
+            preorden(nodo.hojaDerecha());
         }
     }
     void inorden(Nodo nodo){
@@ -194,9 +187,4 @@ public class Arbol {
         }
     }
     
- 
-  public static void main(String[] args) {
-    System.out.println("Hola mundo");
-  }
-}
 }
